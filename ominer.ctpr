@@ -195,6 +195,18 @@ install:
         <IsPartOfProject Value="True"/>
         <UnitName Value="ONetCode"/>
       </Unit>
+      <Unit>
+        <Filename Value="libs/nxnetwork.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="nxNetwork"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/otransactions.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="OTransactions"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -204,7 +216,7 @@ install:
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="core;libraries/cryptolib4pascal;libraries/generics.collections;libraries/hashlib4pascal;libraries/mormot-min;libraries/pascalcoin;libraries/pasopencl;libraries/paszlib;libraries/simplebaselib4pascal;libraries/sphere10;libraries/synapse"/>
+      <OtherUnitFiles Value="libs;core;libraries/cryptolib4pascal;libraries/generics.collections;libraries/hashlib4pascal;libraries/mormot-min;libraries/pascalcoin;libraries/pasopencl;libraries/paszlib;libraries/simplebaselib4pascal;libraries/sphere10;libraries/synapse"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

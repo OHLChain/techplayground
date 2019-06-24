@@ -10,6 +10,10 @@ uses
 
 const VERSION = '0.1';
 
+
+
+//const OPERATION_TYPE_
+
 implementation
 
 end.

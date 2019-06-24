@@ -5,10 +5,11 @@ unit ONetCode;
 interface
 
 uses
-  Classes, SysUtils, blcksock, nxNetwork;
+  Classes, SysUtils, blcksock, nxnetwork, crt;
 
 
-procedure testNet();
+procedure testNetClient(port: String);
+procedure testNetServer(port: String);
 
 //procedure ServerEvent(sender: TConnection; event: TConnectionEvent; ID: integer);
 //procedure ClientEvent(sender: TConnection; event: TConnectionEvent; ID: integer);
@@ -43,8 +44,8 @@ implementation
  writeln('caut client...' + inttostr(ID));
      for Client in sender.clients do begin
        if (Client.ID = ID) then begin
-         writeln('Gasit client #' + inttostr(ID));
-         Client.tcpSock.SendBlock('OOOQPQPQ dsfdsf');
+         //writeln('Gasit client #' + inttostr(ID));
+         Client.tcpSock.SendBlock(message);
        end;
      end;
 
@@ -57,8 +58,8 @@ writeln('in server data');
   if server=nil then exit;
   setlength(s,size);
   move(data[0],s[1],size);
-  writeln(format('xxa Client(%d)> [%s]',[ID,s]));
-  writeln('clienti: ' + inttostr(length(sender.clients)));
+  writeln(format('Client(%d)> [%s]',[ID,s]));
+  //writeln('clienti: ' + inttostr(length(sender.clients)));
   ServerWriteToClientString(sender, ID, 'wtffdsjkflsd');
 
 
@@ -102,36 +103,64 @@ begin
  // Timer1Timer(nil);
 end;
 
- procedure testNet();
+procedure testNetServer(port: String);
+var ch: char;
+begin
+  try
+    server:=TTCPServer.CreateTCPServer(port);
+    ServerConnections := OServer.Create;
 
+     server.onEvent:=@ServerConnections.ServerEvent;
+     server.onData:=@ServerConnections.ServerData;
 
+      server.Connect;
 
+      writeln('Running the server. Press `q` to quit.');
+      repeat
+            sleep(100);
+            ch := readKey();
+      until (ch = 'q');
+
+      server.Disconnect;
+
+      server.Free;
+      server := nil;
+
+  finally
+  end;
+end;
+
+ procedure testNetClient(port: String);
+           var ch: char;
  begin
-
-
    try
- server:=TTCPServer.CreateTCPServer('16384');
- client:=TClient.CreateTCPClient('127.0.0.1','16384');
 
- ServerConnections := OServer.Create;
+ client:=TClient.CreateTCPClient('127.0.0.1',port);
+
  ClientConnections := OClient.Create;
-
- server.onEvent:=@ServerConnections.ServerEvent;
- server.onData:=@ServerConnections.ServerData;
-
  client.onEvent:=@ClientConnections.ClientEvent;
  client.onData:=@ClientConnections.ClientData;
-
- server.Connect;
  client.Connect;
 
- sleep(1000);
 
  client.SendString('uuu');
- sleep(3000);
+
+ writeln('Running the client. Press `q` to quit.');
+      repeat
+            sleep(1000);
+            if KeyPressed then begin
+               ch := readKey();
+                if (ch <> 'q') then begin
+                  client.SendString(ch);
+                end;
+              end;
+
+
+            client.SendString(TimeToStr(Now));
+      until (ch = 'q');
 
  client.Disconnect;
- server.Disconnect;
+
 
  finally
 
@@ -144,10 +173,9 @@ end;
 
  client.Free;
 
-  writeln('preparing for server free');
- server.Free;
+ writeln('preparing for server free');
 
- client := nil; server := nil;
+ client := nil;
 
  end;
  end;

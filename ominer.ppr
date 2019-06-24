@@ -31,18 +31,18 @@ var
   ErrorMsg: String;
 begin
   // quick check parameters
-  ErrorMsg:=CheckOptions('h', 'help');
+  ErrorMsg:=CheckOptions('s', 'server');
   if ErrorMsg<>'' then begin
     ShowException(Exception.Create(ErrorMsg));
     Terminate;
     Exit;
   end;
 
-  // parse parameters
-  if HasOption('h', 'help') then begin
-    WriteHelp;
-    Terminate;
-    Exit;
+  // emulate server type
+  if HasOption('s', 'server') then begin
+    writeln('Server mode.');
+    initServer();
+    halt;;
   end;
 
   { add your program here }

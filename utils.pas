@@ -6,14 +6,23 @@ interface
 
 uses
   Classes, SysUtils, XMLConf, OKey,
-  UPCDataTypes, UCrypto, UBaseTypes, UConst, UOpenSSL , UPCCryptoLib4Pascal, UPCEncryption , ONetCode
+  UPCDataTypes, UCrypto, UBaseTypes, UConst, UOpenSSL , UPCCryptoLib4Pascal, UPCEncryption , ONetCode ,
+  otransactions
   ;
 
 procedure initMiner();
 
+procedure initServer();
+
 
 
 implementation
+
+procedure initServer();
+begin
+    testNetServer('16384');
+end;
+
 
 procedure initMiner();
 var config: TXMLConfig;
@@ -40,9 +49,10 @@ var config: TXMLConfig;
 
 begin
 
-    testNet();
+    testNetClient('16384');
+    //testTransactions;
 
-    halt;
+    exit;
 
      writeln('test');
 
