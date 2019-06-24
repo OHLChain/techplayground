@@ -120,7 +120,7 @@ install:
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="core;libraries/cryptolib4pascal;libraries/generics.collections;libraries/hashlib4pascal;libraries/mormot-min;libraries/pascalcoin;libraries/pasopencl;libraries/paszlib;libraries/simplebaselib4pascal;libraries/sphere10;libraries/synapse"/>
+            <OtherUnitFiles Value="libs;core;libraries/cryptolib4pascal;libraries/generics.collections;libraries/hashlib4pascal;libraries/mormot-min;libraries/pascalcoin;libraries/pasopencl;libraries/paszlib;libraries/simplebaselib4pascal;libraries/sphere10;libraries/synapse"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
