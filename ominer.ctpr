@@ -161,13 +161,10 @@ install:
       <FormatVersion Value="2"/>
       <Modes Count="0"/>
     </RunParams>
-    <RequiredPackages Count="2">
+    <RequiredPackages Count="1">
       <Item1>
-        <PackageName Value="CryptoLib4PascalPackage"/>
-      </Item1>
-      <Item2>
         <PackageName Value="pl_DCP"/>
-      </Item2>
+      </Item1>
     </RequiredPackages>
     <Units>
       <Unit>
@@ -189,42 +186,14 @@ install:
         <UnitName Value="FGInt"/>
       </Unit>
       <Unit>
-        <Filename Value="cryptocore.pas"/>
-        <FRMtype Value="0"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="OKey"/>
-      </Unit>
-      <Unit>
-        <Filename Value="UBaseTypes.pas"/>
-        <FRMtype Value="0"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
         <Filename Value="config.inc"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="UPCDataTypes.pas"/>
-        <FRMtype Value="0"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="ULog.pas"/>
-        <FRMtype Value="0"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
         <Filename Value="onetcode.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ONetCode"/>
-      </Unit>
-      <Unit>
-        <Filename Value="nxnetwork.pas"/>
-        <FRMtype Value="0"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="nxNetwork"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -251,14 +220,13 @@ install:
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
-      <TargetOS Value="linux"/>
       <Optimizations>
         <OptimizationLevel Value="0"/>
       </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
-        <DebugInfoType Value="dsDwarf3"/>
+        <DebugInfoType Value="dsDwarf2Set"/>
       </Debugging>
     </Linking>
   </CompilerOptions>

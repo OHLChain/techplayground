@@ -6,3 +6,6 @@ Data/*
 ominer
 # Don't include the Windows binary
 ominer.exe
+
+
+.DS_STORE
