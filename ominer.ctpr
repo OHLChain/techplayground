@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasScaledStatement Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="OHLChain"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+    </General>
+    <CustomData Count="15">
+      <Item0 Name="CT-Packager/copyright" Value="2012 Jane Doe"/>
+      <Item1 Name="CT-Packager/deb/ppa" Value="ppa:johndoe/use-your-own"/>
+      <Item2 Name="CT-Packager/deb/series" Value="precise"/>
+      <Item3 Name="CT-Packager/deb/tpl_changelog" Value="?PACKAGE_NAME? (?FULLVERSION?) ?SERIES?; urgency=low
+
+  * Original version ?VERSION? packaged with lazdebian
+
+ -- ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>  ?DATER?
+"/>
+      <Item4 Name="CT-Packager/deb/tpl_control" Value="Source: ?PACKAGE_NAME?
+Maintainer: ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.3
+Build-Depends: fpc, Typhon, lcl, lcl-utils, debhelper (>= 8)
+
+Package: ?PACKAGE_NAME?
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: ?DESCRIPTION?
+ ?DESCRIPTION_LONG?
+"/>
+      <Item5 Name="CT-Packager/deb/tpl_copyright" Value="Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: *
+Copyright: ?COPYRIGHT?
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ /usr/share/common-licenses/GPL-2
+"/>
+      <Item6 Name="CT-Packager/deb/tpl_rules" Value="#!/usr/bin/make -f
+
+ROOT = $(CURDIR)/debian/?PACKAGE_NAME?
+
+override_dh_auto_clean:
+	$(RM) -r lib
+	$(RM) lib *.res ?EXECUTABLE?
+
+override_dh_auto_build:
+	typhoonbuild ?PROJECT?
+
+override_dh_auto_install:
+	install -d -m 755 $(ROOT)/usr/bin
+	install -s -m 755 ?EXECUTABLE? $(ROOT)/usr/bin
+
+%:
+	dh $@
+"/>
+      <Item7 Name="CT-Packager/description" Value="this is a program"/>
+      <Item8 Name="CT-Packager/description_long" Value="long description may not be empty!"/>
+      <Item9 Name="CT-Packager/export_cmd" Value="?CP? *.ctpr ?TEMPFOLDER?/
+?CP? *.ppr ?TEMPFOLDER?/
+?CP? *.pas ?TEMPFOLDER?/
+?CP? *.frm ?TEMPFOLDER?/
+?CP? *.ico ?TEMPFOLDER?/
+"/>
+      <Item10 Name="CT-Packager/maintainer" Value="John Doe"/>
+      <Item11 Name="CT-Packager/maintainer_email" Value="john_doe@example.invalid"/>
+      <Item12 Name="CT-Packager/package_name" Value="debian-package-name"/>
+      <Item13 Name="CT-Packager/tpl_makefile" Value="PREFIX = /usr/local
+
+# debuild will set DESTDIR to the fakeroot path and
+# in the override rules we will change PREFIX to /usr
+BINDIR = $(DESTDIR)$(PREFIX)/bin
+
+.PHONY : all
+all:
+	typhoonbuild ?PROJECT?
+
+.PHONY : clean
+clean:
+	$(RM) -r lib
+	$(RM) *.res
+	$(RM) ?EXECUTABLE?
+
+.PHONY : install
+install:
+	mkdir -p $(BINDIR)
+	install -s ?EXECUTABLE? $(BINDIR)/
+"/>
+      <Item14 Name="CT-Packager/use_existing_makefile" Value="False"/>
+    </CustomData>
+    <BuildModes>
+      <Item Name="linux 64 debug" Default="True"/>
+      <Item Name="linux 64 release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="ominer"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <OtherUnitFiles Value="core;libraries/cryptolib4pascal;libraries/generics.collections;libraries/hashlib4pascal;libraries/mormot-min;libraries/pascalcoin;libraries/pasopencl;libraries/paszlib;libraries/simplebaselib4pascal;libraries/sphere10;libraries/synapse"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+            <TargetProcessor Value="ATHLON64"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+            </Debugging>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0"/>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="CryptoLib4PascalPackage"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="pl_DCP"/>
+      </Item2>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="ominer.ppr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="utils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="constants.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="fgint.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FGInt"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cryptocore.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="OKey"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UBaseTypes.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="config.inc"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="UPCDataTypes.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ULog.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="onetcode.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ONetCode"/>
+      </Unit>
+      <Unit>
+        <Filename Value="nxnetwork.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="nxNetwork"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="ominer"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="core;libraries/cryptolib4pascal;libraries/generics.collections;libraries/hashlib4pascal;libraries/mormot-min;libraries/pascalcoin;libraries/pasopencl;libraries/paszlib;libraries/simplebaselib4pascal;libraries/sphere10;libraries/synapse"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <IncludeAssertionCode Value="True"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <Checks>
+        <IOChecks Value="True"/>
+        <RangeChecks Value="True"/>
+        <OverflowChecks Value="True"/>
+        <StackChecks Value="True"/>
+      </Checks>
+      <VerifyObjMethodCallValidity Value="True"/>
+      <TargetOS Value="linux"/>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf3"/>
+      </Debugging>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
