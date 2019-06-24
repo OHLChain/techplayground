@@ -1,3 +1,8 @@
 lib/*
 backup/*
 Data/*
+
+# Don't include the linux binary
+ominer
+# Don't include the Windows binary
+ominer.exe
