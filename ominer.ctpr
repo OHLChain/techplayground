@@ -207,6 +207,18 @@ install:
         <IsPartOfProject Value="True"/>
         <UnitName Value="OTransactions"/>
       </Unit>
+      <Unit>
+        <Filename Value="libs/orunner.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ORunner"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TOConfiguration"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

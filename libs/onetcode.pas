@@ -11,10 +11,6 @@ uses
 procedure testNetClient(port: String);
 procedure testNetServer(port: String);
 
-//procedure ServerEvent(sender: TConnection; event: TConnectionEvent; ID: integer);
-//procedure ClientEvent(sender: TConnection; event: TConnectionEvent; ID: integer);
-//procedure ServerData(sender: TConnection; data: PByte; size,ID: integer);
-//procedure ClientData(sender: TConnection; data: PByte; size,ID: integer);
 
 Type OServer = class
    procedure ServerData(sender: TConnection; data: PByte; size,ID: integer);
@@ -58,7 +54,7 @@ writeln('in server data');
   if server=nil then exit;
   setlength(s,size);
   move(data[0],s[1],size);
-  writeln(format('Client(%d)> [%s]',[ID,s]));
+  writeln(format('Client(%d)> [%s]'+ chr(13),[ID,s]));
   //writeln('clienti: ' + inttostr(length(sender.clients)));
   ServerWriteToClientString(sender, ID, 'wtffdsjkflsd');
 

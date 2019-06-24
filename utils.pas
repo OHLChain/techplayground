@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, XMLConf, OKey,
   UPCDataTypes, UCrypto, UBaseTypes, UConst, UOpenSSL , UPCCryptoLib4Pascal, UPCEncryption , ONetCode ,
-  otransactions
+  otransactions, orunner
   ;
 
 procedure initMiner();
@@ -15,14 +15,34 @@ procedure initMiner();
 procedure initServer();
 
 
+var Runner: TOInstance;
+
+procedure RunModel();
 
 implementation
 
-procedure initServer();
+
+procedure RunModel();
 begin
-    testNetServer('16384');
+    Runner := TOInstance.Create;
+
+    //try to get the instance ID from InstanceID environment variable
+
+    Runner.InstanceID := GetEnvironmentVariable('InstanceID');
+    if (Trim(Runner.InstanceID) = '') then begin
+       writeln('Run the tech demo like: export InstanceID=''nodeA'' && ./ominer');
+       writeln('Continuing in default mode...');
+       Runner.InstanceID:= 'default';
+    end;
+
+    Runner.run;
 end;
 
+procedure initServer();
+begin
+    WriteLn('PATH = ' + GetEnvironmentVariable('SEEDNODE'));
+    testNetServer('16384');
+end;
 
 procedure initMiner();
 var config: TXMLConfig;
@@ -56,14 +76,7 @@ begin
 
      writeln('test');
 
-     if not DirectoryExists('Data') then
-     begin
-       writeln ('Creating data directory...');
-       if not CreateDir('Data') then begin
-         writeln('Can''t create the Data directory.');
-         exit;
-       end;
-     end;
+
 
      loadedssl := InitSSLFunctions();
 

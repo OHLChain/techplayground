@@ -1,6 +1,7 @@
 lib/*
 backup/*
 Data/*
+libs/backup
 
 # Don't include the linux binary
 ominer

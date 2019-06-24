@@ -38,16 +38,17 @@ begin
     Exit;
   end;
 
-  // emulate server type
-  if HasOption('s', 'server') then begin
-    writeln('Server mode.');
-    initServer();
-    halt;;
-  end;
+  //// emulate server type
+  //if HasOption('s', 'server') then begin
+  //  writeln('Server mode.');
+  //  initServer();
+  //  halt;;
+  //end;
 
   { add your program here }
 
-  initMiner();
+  //initMiner();
+  RunModel();
   // stop program loop
   Terminate;
 end;
