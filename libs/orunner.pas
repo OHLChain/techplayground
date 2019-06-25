@@ -6,16 +6,8 @@ interface
 
 
 uses
-  Classes, SysUtils, onetcode, toconfiguration, crt
+  Classes, SysUtils, onetcode, toconfiguration, crt, IniFiles
   ;
-
-Type TNode = record
-     address: String;
-     connected: Boolean;
-     speedBench: Integer;
-end;
-
-
 
 
 Type TOInstance = class
@@ -36,9 +28,12 @@ implementation
 
 procedure TOInstance.run;
 begin
-   writeln('Node '''+self.InstanceID+''' initiated.');
+
    self.Terminating:= False;
    self.readConfiguration;
+
+   writeln('Node '''+self.config.NodeId +''' initiated.');
+
    self.loop;
 end;
 
@@ -52,6 +47,7 @@ begin
      self.dataDir := self.InstanceID;
    end;
 
+   self.dataDir:= 'Blockchain/'+self.dataDir;
    self.config := TConfiguration.Create;
    self.config.initDataDirectory(self.dataDir);
 

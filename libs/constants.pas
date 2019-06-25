@@ -10,6 +10,13 @@ uses
 
 const VERSION = '0.1';
 
+const iniFile = 'oconfig.ini';
+const INI_General = 'General';
+const INI_Network = 'Network';
+const INI_SWAMP = 'Swamp';
+
+const BIND_Default_Address = '0.0.0.0';
+const BIND_Default_Port = 16384;
 
 
 const OPERATION_TYPE_BLOCKCHAIN_GENERAL_INFO = 1;

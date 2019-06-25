@@ -1,6 +1,6 @@
 lib/*
 backup/*
-Data/*
+Blockchain/*
 libs/backup
 
 # Don't include the linux binary
