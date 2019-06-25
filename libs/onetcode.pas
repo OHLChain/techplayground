@@ -5,7 +5,7 @@ unit ONetCode;
 interface
 
 uses
-  Classes, SysUtils, blcksock, nxnetwork, crt;
+  Classes, SysUtils, blcksock, nxnetwork, crt, TOConfiguration;
 
 
 procedure testNetClient(port: String);
@@ -18,10 +18,10 @@ Type OServer = class
    procedure ServerWriteToClientString(sender: TConnection; ID: integer; message: String);
 end;
 
-  Type OClient = class
-       procedure ClientData(sender: TConnection; data: PByte; size,ID: integer);
-       procedure ClientEvent(sender: TConnection; event: TConnectionEvent; ID: integer);
-  end;
+Type OClient = class
+   procedure ClientData(sender: TConnection; data: PByte; size,ID: integer);
+   procedure ClientEvent(sender: TConnection; event: TConnectionEvent; ID: integer);
+end;
 
 var
 client: TClient;
@@ -31,7 +31,49 @@ ServerConnections: OServer;
 ClientConnections: OClient;
 
 
+Type TONetCode = class
+  var
+    client: TClient;
+    server: TServer;
+
+
+    ServerConnections: OServer;
+    ClientConnections: OClient;
+
+  procedure runAsServer(config: TConfiguration);
+  procedure disconnect;
+  procedure connectToNodes();
+end;
+
+
 implementation
+
+procedure TONetCode.disconnect;
+begin
+ if (Assigned(self.server)) then
+    FreeAndNil(self.server);
+
+
+end;
+
+procedure TONetCode.runAsServer(config: TConfiguration);
+begin
+
+    self.server:=TTCPServer.CreateTCPServer(inttostr(config.bindPort));
+    self.ServerConnections := OServer.Create;
+
+    self.server.onEvent:=@self.ServerConnections.ServerEvent;
+    self.server.onData:=@self.ServerConnections.ServerData;
+
+    self.server.Connect;
+
+end;
+
+procedure TONetCode.connectToNodes;
+begin
+
+end;
+
 
  procedure OServer.ServerWriteToClientString(sender: TConnection; ID: integer; message: String);
  var
@@ -108,6 +150,8 @@ begin
 
      server.onEvent:=@ServerConnections.ServerEvent;
      server.onData:=@ServerConnections.ServerData;
+
+
 
       server.Connect;
 

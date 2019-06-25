@@ -43,7 +43,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="27" Y="43"/>
-        <UsageCount Value="151"/>
+        <UsageCount Value="154"/>
       </Unit>
       <Unit>
         <Filename Value="onetcode.pas"/>
@@ -52,7 +52,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="78"/>
         <CursorPos X="60" Y="130"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="124"/>
       </Unit>
       <Unit>
         <Filename Value="libs/nxnetwork.pas"/>
@@ -60,8 +60,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="nxNetwork"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="134" Y="22"/>
-        <UsageCount Value="76"/>
+        <TopLine Value="68"/>
+        <CursorPos X="17" Y="127"/>
+        <UsageCount Value="79"/>
       </Unit>
       <Unit>
         <Filename Value="libs/otransactions.pas"/>
@@ -70,7 +71,7 @@
         <UnitName Value="OTransactions"/>
         <EditorIndex Value="7"/>
         <CursorPos X="39" Y="6"/>
-        <UsageCount Value="76"/>
+        <UsageCount Value="79"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -116,7 +117,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="750"/>
         <CursorPos X="35" Y="249"/>
-        <UsageCount Value="58"/>
+        <UsageCount Value="60"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -189,6 +190,14 @@
         <TopLine Value="40"/>
         <CursorPos X="15" Y="58"/>
         <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="559"/>
+        <CursorPos X="3" Y="576"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="core/UBaseTypes.pas"/>
@@ -265,20 +274,20 @@
         <Filename Value="libs/onetcode.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="ONetCode"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="10"/>
-        <CursorPos X="7" Y="155"/>
-        <FoldState Value=" T3iL07011E"/>
-        <UsageCount Value="38"/>
+        <TopLine Value="34"/>
+        <CursorPos X="2" Y="52"/>
+        <FoldState Value=" T3iP1C4X"/>
+        <UsageCount Value="40"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="libs/OKey.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="139"/>
-        <CursorPos X="81" Y="34"/>
-        <UsageCount Value="37"/>
+        <CursorPos X="17" Y="5"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -286,7 +295,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="8"/>
         <CursorPos Y="12"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -303,11 +312,10 @@
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ORunner"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="10"/>
-        <CursorPos X="40" Y="35"/>
-        <UsageCount Value="64"/>
+        <TopLine Value="16"/>
+        <CursorPos X="8" Y="19"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -316,8 +324,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="TOConfiguration"/>
         <EditorIndex Value="6"/>
-        <CursorPos Y="15"/>
-        <UsageCount Value="61"/>
+        <CursorPos X="6" Y="16"/>
+        <UsageCount Value="65"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -327,127 +335,152 @@
         <CursorPos X="63" Y="5"/>
         <UsageCount Value="29"/>
       </Unit>
+      <Unit>
+        <Filename Value="libraries/generics.collections/inc/generics.dictionaries.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="256"/>
+        <CursorPos X="67" Y="13"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libraries/generics.collections/generics.strings.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Generics.Strings"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="68" Y="13"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libraries/generics.collections/generics.defaults.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Generics.Defaults"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3189"/>
+        <CursorPos X="67" Y="11"/>
+        <UsageCount Value="11"/>
+      </Unit>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="/usr/local/codetyphon/fpcsrc/packages/fcl-base/src/custapp.pp"/>
-        <Caret Line="343" Column="9" TopLine="338"/>
-      </Position1>
-      <Position2>
-        <Filename Value="ominer.ppr"/>
-        <Caret Line="44" Column="10" TopLine="36"/>
-      </Position2>
-      <Position3>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="118" Column="23" TopLine="77"/>
-      </Position3>
-      <Position4>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="146" Column="78" TopLine="125"/>
-      </Position4>
-      <Position5>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="151" Column="13" TopLine="138"/>
-      </Position5>
-      <Position6>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="152" Column="32" TopLine="138"/>
-      </Position6>
-      <Position7>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="81" Column="67" TopLine="50"/>
-      </Position7>
-      <Position8>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="83" Column="84" TopLine="60"/>
-      </Position8>
-      <Position9>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="105" Column="88" TopLine="56"/>
-      </Position9>
-      <Position10>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="87" Column="53" TopLine="65"/>
-      </Position10>
-      <Position11>
-        <Filename Value="ominer.ppr"/>
-        <Caret Line="45" Column="12" TopLine="26"/>
-      </Position11>
-      <Position12>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="51" Column="61" TopLine="31"/>
-      </Position12>
-      <Position13>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="59" Column="68" TopLine="44"/>
-      </Position13>
-      <Position14>
-        <Filename Value="libs/onetcode.pas"/>
-        <Caret Line="52" Column="59" TopLine="45"/>
-      </Position14>
-      <Position15>
-        <Filename Value="/usr/local/codetyphon/fpcsrc/packages/fcl-base/src/custapp.pp"/>
-        <Caret Line="370" Column="20" TopLine="192"/>
-      </Position15>
-      <Position16>
         <Filename Value="utils.pas"/>
         <Caret Line="36" Column="59" TopLine="10"/>
+      </Position1>
+      <Position2>
+        <Filename Value="libs/orunner.pas"/>
+        <Caret Line="23" Column="13" TopLine="6"/>
+      </Position2>
+      <Position3>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="25" Column="3"/>
+      </Position3>
+      <Position4>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="28" Column="29"/>
+      </Position4>
+      <Position5>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="15" Column="54"/>
+      </Position5>
+      <Position6>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="14" Column="54" TopLine="2"/>
+      </Position6>
+      <Position7>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="20" Column="26"/>
+      </Position7>
+      <Position8>
+        <Filename Value="libs/orunner.pas"/>
+        <Caret Line="66" Column="25" TopLine="35"/>
+      </Position8>
+      <Position9>
+        <Filename Value="libs/orunner.pas"/>
+        <Caret Line="57" Column="91" TopLine="43"/>
+      </Position9>
+      <Position10>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="15" Column="13" TopLine="7"/>
+      </Position10>
+      <Position11>
+        <Filename Value="libs/orunner.pas"/>
+        <Caret Line="57" Column="91" TopLine="43"/>
+      </Position11>
+      <Position12>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="20" Column="20"/>
+      </Position12>
+      <Position13>
+        <Filename Value="libs/orunner.pas"/>
+        <Caret Line="36" Column="44" TopLine="14"/>
+      </Position13>
+      <Position14>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="44" Column="51" TopLine="22"/>
+      </Position14>
+      <Position15>
+        <Filename Value="libs/toconfiguration.pas"/>
+        <Caret Line="49" Column="34" TopLine="25"/>
+      </Position15>
+      <Position16>
+        <Filename Value="libs/orunner.pas"/>
+        <Caret Line="22" Column="50" TopLine="10"/>
       </Position16>
       <Position17>
         <Filename Value="libs/orunner.pas"/>
-        <Caret Line="23" Column="13" TopLine="6"/>
+        <Caret Line="12" Column="43"/>
       </Position17>
       <Position18>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="25" Column="3"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="105" Column="33" TopLine="83"/>
       </Position18>
       <Position19>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="28" Column="29"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="37" Column="17" TopLine="13"/>
       </Position19>
       <Position20>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="15" Column="54"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="39" Column="33" TopLine="22"/>
       </Position20>
       <Position21>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="14" Column="54" TopLine="2"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="44" Column="45" TopLine="22"/>
       </Position21>
       <Position22>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="20" Column="26"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="39" Column="41" TopLine="16"/>
       </Position22>
       <Position23>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="66" Column="25" TopLine="35"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="43" Column="53" TopLine="22"/>
       </Position23>
       <Position24>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="57" Column="91" TopLine="43"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="46" Column="42" TopLine="29"/>
       </Position24>
       <Position25>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="15" Column="13" TopLine="7"/>
+        <Filename Value="libs/orunner.pas"/>
+        <Caret Line="39" Column="39" TopLine="16"/>
       </Position25>
       <Position26>
         <Filename Value="libs/orunner.pas"/>
-        <Caret Line="57" Column="91" TopLine="43"/>
+        <Caret Line="16" Column="7" TopLine="16"/>
       </Position26>
       <Position27>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="20" Column="20"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="50" Column="19" TopLine="31"/>
       </Position27>
       <Position28>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="36" Column="44" TopLine="14"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="51" Column="60" TopLine="33"/>
       </Position28>
       <Position29>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="44" Column="51" TopLine="22"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="50" Column="71" TopLine="33"/>
       </Position29>
       <Position30>
-        <Filename Value="libs/toconfiguration.pas"/>
-        <Caret Line="49" Column="34" TopLine="25"/>
+        <Filename Value="libs/onetcode.pas"/>
+        <Caret Line="44" Column="59" TopLine="34"/>
       </Position30>
     </JumpHistory>
     <RunParams>

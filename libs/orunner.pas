@@ -9,7 +9,6 @@ uses
   Classes, SysUtils, onetcode, toconfiguration, crt, IniFiles
   ;
 
-
 Type TOInstance = class
    var
       InstanceID: String;
@@ -17,6 +16,8 @@ Type TOInstance = class
       config: TConfiguration;
       Terminating: Boolean;
       ch: char;
+
+      blockEngine: TONetCode;
 
    procedure run;
    procedure loop;
@@ -33,6 +34,9 @@ begin
    self.readConfiguration;
 
    writeln('Node '''+self.config.NodeId +''' initiated.');
+
+   blockEngine := TONetCode.Create;
+   blockengine.runAsServer(self.config);
 
    self.loop;
 end;

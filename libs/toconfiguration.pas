@@ -54,6 +54,8 @@ begin
 
    writeln('I am '+ self.NodeId);
 
+
+
 end;
 
 Class Constructor  TConfiguration.Create;
