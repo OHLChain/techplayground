@@ -5,19 +5,18 @@ unit TOConfiguration;
 interface
 
 uses
-  Classes, SysUtils, constants, inifiles;
+  Classes, SysUtils, constants, inifiles, strutils;
 
-Type TswampNode = record
+Type TSwampNode = record
    address: String;
    port: Integer;
-   benchSpeed: Int64;
 end;
 
 Type TConfiguration = class
   var
      nodeSleepTime: Integer;
      NodeId: String;
-     swamp: array of TswampNode;
+     starSwampNodes: array of TswampNode;
 
   //node config
   bindAddress: String;
@@ -34,6 +33,8 @@ implementation
 
 procedure TConfiguration.initDataDirectory(dataDir: String);
 var ini: TINIFile;
+  swampCount, swampPort, i, tmpI : Integer;
+  tempNode,swampHost: String;
 begin
    self.nodeSleepTime := 10;
 
@@ -54,8 +55,25 @@ begin
 
    writeln('I am '+ self.NodeId);
 
+   swampCount := ini.ReadInteger(INI_SWAMP,'NodeCount',0);
+   SetLength(self.starSwampNodes,swampCount);
+
+   for i:=1 to swampCount do begin
+       tempNode := ini.ReadString(INI_SWAMP,'NODE_'+inttostr(i),'0.0.0.0:0');
+       writeln('Reading starting swamp node '+inttostr(i)+': ' + tempNode);
+       tmpI := pos(':',tempNode);
+
+       swampHost := LeftStr(tempNode, tmpI-1);
+       swampPort:= strtoint(RightStr(tempNode, Length(tempNode) - tmpI));
+
+       writeln('New swamp node: ' + swampHost + ':'+inttostr(swampPort) );
+
+       self.starSwampNodes[i-1].address:=swampHost;
+       self.starSwampNodes[i-1].port:=swampPort;
+   end;
 
 
+   writeln('CNT SWAMP: ' + inttostr(Length(self.starSwampNodes) ));
 end;
 
 Class Constructor  TConfiguration.Create;

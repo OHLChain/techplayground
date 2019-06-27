@@ -60,12 +60,15 @@ procedure TONetCode.runAsServer(config: TConfiguration);
 begin
 
     self.server:=TTCPServer.CreateTCPServer(inttostr(config.bindPort));
+    self.server.Host:=config.bindAddress;
     self.ServerConnections := OServer.Create;
 
     self.server.onEvent:=@self.ServerConnections.ServerEvent;
     self.server.onData:=@self.ServerConnections.ServerData;
 
     self.server.Connect;
+
+    writeln('Waiting connections on ' + self.server.Host + ':' + inttostr(config.bindPort));
 
 end;
 
