@@ -3,6 +3,9 @@ backup/*
 Blockchain/*
 libs/backup
 
+# Don't include debugging information in the commits
+ominer.dbg
+
 # Don't include the linux binary
 ominer
 # Don't include the Windows binary
