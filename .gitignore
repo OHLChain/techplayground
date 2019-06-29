@@ -5,7 +5,7 @@ libs/backup
 
 # Don't include debugging information in the commits
 ominer.dbg
-
+ominer.dSym/*
 # Don't include the linux binary
 ominer
 # Don't include the Windows binary

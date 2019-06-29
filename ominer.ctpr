@@ -219,6 +219,12 @@ install:
         <IsPartOfProject Value="True"/>
         <UnitName Value="TOConfiguration"/>
       </Unit>
+      <Unit>
+        <Filename Value="libs/toclients.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TOClients"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

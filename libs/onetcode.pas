@@ -5,7 +5,7 @@ unit ONetCode;
 interface
 
 uses
-  Classes, SysUtils, blcksock, nxnetwork, crt, TOConfiguration;
+  Classes, SysUtils, nxnetwork, crt, TOConfiguration;
 
 
 procedure testNetClient(port: String);
@@ -36,13 +36,11 @@ Type TONetCode = class
     client: TClient;
     server: TServer;
 
-
     ServerConnections: OServer;
     ClientConnections: OClient;
 
   procedure runAsServer(config: TConfiguration);
   procedure disconnect;
-  procedure connectToNodes();
 end;
 
 
@@ -72,10 +70,6 @@ begin
 
 end;
 
-procedure TONetCode.connectToNodes;
-begin
-
-end;
 
 
  procedure OServer.ServerWriteToClientString(sender: TConnection; ID: integer; message: String);
@@ -85,7 +79,7 @@ end;
  writeln('caut client...' + inttostr(ID));
      for Client in sender.clients do begin
        if (Client.ID = ID) then begin
-         //writeln('Gasit client #' + inttostr(ID));
+         writeln('Gasit client #' + inttostr(ID));
          Client.tcpSock.SendBlock(message);
        end;
      end;
@@ -147,6 +141,7 @@ end;
 procedure testNetServer(port: String);
 var ch: char;
 begin
+  exit;
   try
     server:=TTCPServer.CreateTCPServer(port);
     ServerConnections := OServer.Create;

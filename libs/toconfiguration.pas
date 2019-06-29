@@ -10,6 +10,7 @@ uses
 Type TSwampNode = record
    address: String;
    port: Integer;
+   connectionId: Integer;
 end;
 
 Type TConfiguration = class
@@ -36,7 +37,7 @@ var ini: TINIFile;
   swampCount, swampPort, i, tmpI : Integer;
   tempNode,swampHost: String;
 begin
-   self.nodeSleepTime := 10;
+   self.nodeSleepTime := 1000;
 
    if not DirectoryExists(dataDir) then
      begin
@@ -85,6 +86,8 @@ Class Destructor TConfiguration.Destroy;
 begin
 
 end;
+
+begin
 
 end.
 
