@@ -8,18 +8,16 @@
         <Filename Value="ominer.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="47" Y="11"/>
+        <CursorPos X="32" Y="21"/>
         <UsageCount Value="205"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="utils.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="7"/>
-        <CursorPos X="19" Y="37"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="52" Y="30"/>
         <UsageCount Value="205"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="constants.pas"/>
@@ -56,56 +54,94 @@
       </Unit>
       <Unit>
         <Filename Value="libs/nxnetwork.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="nxNetwork"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="191"/>
-        <CursorPos X="50" Y="191"/>
-        <UsageCount Value="175"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="203"/>
       </Unit>
       <Unit>
         <Filename Value="libs/otransactions.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="OTransactions"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="39" Y="6"/>
-        <UsageCount Value="175"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="203"/>
       </Unit>
       <Unit>
         <Filename Value="libs/orunner.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ORunner"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="63"/>
-        <CursorPos X="46" Y="79"/>
-        <UsageCount Value="163"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="4" Y="54"/>
+        <UsageCount Value="392"/>
       </Unit>
       <Unit>
         <Filename Value="libs/toconfiguration.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TOConfiguration"/>
-        <EditorIndex Value="9"/>
-        <TopLine Value="14"/>
-        <CursorPos X="30" Y="40"/>
-        <UsageCount Value="161"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="27" Y="40"/>
+        <UsageCount Value="390"/>
       </Unit>
       <Unit>
         <Filename Value="libs/toclients.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TOClients"/>
-        <EditorIndex Value="6"/>
-        <CursorPos X="54" Y="40"/>
-        <UsageCount Value="115"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
+        <CursorPos X="14" Y="14"/>
+        <UsageCount Value="344"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="59" Y="345"/>
+        <FoldState Value=" T3lR03042p"/>
+        <UsageCount Value="249"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/tech.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="17"/>
+        <CursorPos X="33" Y="22"/>
+        <UsageCount Value="224"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/echo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="86"/>
+        <CursorPos X="34" Y="105"/>
+        <FoldState Value=" T3jV0ch"/>
+        <UsageCount Value="217"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/tconnectionmanager.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TConnectionManager"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="11"/>
+        <UsageCount Value="111"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tclient.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TClient"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="10" Y="65"/>
+        <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -113,28 +149,28 @@
         <UnitName Value="OKey"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="28" Y="12"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="87"/>
       </Unit>
       <Unit>
         <Filename Value="UBaseTypes.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="24"/>
         <CursorPos X="32" Y="29"/>
-        <UsageCount Value="80"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="UPCDataTypes.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="22"/>
         <CursorPos X="56" Y="23"/>
-        <UsageCount Value="80"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="ULog.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="208"/>
         <CursorPos X="21" Y="211"/>
-        <UsageCount Value="80"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="nxnetwork.pas"/>
@@ -142,306 +178,180 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
         <CursorPos X="39" Y="73"/>
-        <UsageCount Value="33"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/packages/fcl-base/src/custapp.pp"/>
         <FRMtype Value="0"/>
         <UnitName Value="CustApp"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="664"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="663"/>
         <CursorPos X="8" Y="695"/>
-        <UsageCount Value="107"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="../../CryptoLib4Pascal/CryptoLib/src/Interfaces/ClpIECC.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="194"/>
-        <CursorPos X="3" Y="194"/>
-        <UsageCount Value="4"/>
-      </Unit>
-      <Unit>
-        <Filename Value="../../CryptoLib4Pascal/CryptoLib/src/Math/ClpBigInteger.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="416"/>
-        <CursorPos X="14" Y="432"/>
-        <UsageCount Value="4"/>
-      </Unit>
-      <Unit>
-        <Filename Value="/usr/local/codetyphon/fpcsrc/packages/fcl-xml/src/xmlconf.pp"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="XMLConf"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="105"/>
-        <CursorPos X="47" Y="105"/>
-        <UsageCount Value="6"/>
-      </Unit>
-      <Unit>
-        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="88"/>
-        <CursorPos X="4" Y="104"/>
-        <UsageCount Value="4"/>
-      </Unit>
-      <Unit>
-        <Filename Value="../../CryptoLib4Pascal/CryptoLib/src/Interfaces/ClpIAsymmetricCipherKeyPair.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="11"/>
-        <CursorPos X="3" Y="28"/>
-        <UsageCount Value="5"/>
-      </Unit>
-      <Unit>
-        <Filename Value="../../CryptoLib4Pascal/CryptoLib/src/Include/CryptoLib.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="5"/>
-      </Unit>
-      <Unit>
-        <Filename Value="../../CryptoLib4Pascal/CryptoLib/src/Interfaces/ClpIECDomainParameters.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="18"/>
-        <CursorPos X="3" Y="30"/>
-        <UsageCount Value="4"/>
-      </Unit>
-      <Unit>
-        <Filename Value="core/UCrypto.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="40"/>
-        <CursorPos X="15" Y="58"/>
-        <UsageCount Value="4"/>
-      </Unit>
-      <Unit>
-        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1276"/>
-        <CursorPos X="11" Y="1294"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="core/UBaseTypes.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="39"/>
-        <CursorPos X="18" Y="54"/>
-        <UsageCount Value="2"/>
-      </Unit>
-      <Unit>
-        <Filename Value="core/UOpenSSL.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="551"/>
-        <CursorPos Y="645"/>
-        <UsageCount Value="2"/>
-      </Unit>
-      <Unit>
-        <Filename Value="OKey.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="53" Y="111"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="79"/>
       </Unit>
       <Unit>
         <Filename Value="libraries/synapse/blcksock.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="821"/>
-        <CursorPos X="14" Y="842"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="281"/>
+        <CursorPos X="5" Y="303"/>
+        <FoldState Value=" T7+DM.2"/>
         <UsageCount Value="10"/>
-      </Unit>
-      <Unit>
-        <Filename Value="core/UBlockChain.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="45" Y="14"/>
-        <UsageCount Value="7"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="libs/onetcode.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="ONetCode"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="5"/>
-        <CursorPos X="55" Y="15"/>
-        <UsageCount Value="88"/>
+        <TopLine Value="121"/>
+        <CursorPos X="5" Y="147"/>
+        <UsageCount Value="57"/>
       </Unit>
       <Unit>
         <Filename Value="libs/OKey.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="99"/>
         <CursorPos X="82" Y="107"/>
-        <UsageCount Value="88"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="60"/>
       </Unit>
       <Unit>
         <Filename Value="libs/constants.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="-1"/>
         <CursorPos Y="12"/>
-        <UsageCount Value="88"/>
+        <UsageCount Value="73"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libraries/synapse/ssfpc.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="47"/>
+        <CursorPos X="3" Y="91"/>
+        <UsageCount Value="12"/>
         <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/sysutils/diskh.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="63" Y="5"/>
-        <UsageCount Value="20"/>
-      </Unit>
-      <Unit>
-        <Filename Value="libraries/generics.collections/inc/generics.dictionaries.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="256"/>
-        <CursorPos X="67" Y="13"/>
-        <UsageCount Value="2"/>
-      </Unit>
-      <Unit>
-        <Filename Value="libraries/generics.collections/generics.strings.pas"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="Generics.Strings"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="68" Y="13"/>
-        <UsageCount Value="2"/>
-      </Unit>
-      <Unit>
-        <Filename Value="libraries/generics.collections/generics.defaults.pas"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="Generics.Defaults"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="3189"/>
-        <CursorPos X="67" Y="11"/>
-        <UsageCount Value="2"/>
       </Unit>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="66" Column="35" TopLine="62"/>
+        <Filename Value="libs/echo.pas"/>
+        <Caret Line="85" Column="32" TopLine="71"/>
       </Position1>
       <Position2>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="85" Column="41" TopLine="67"/>
+        <Filename Value="libs/echo.pas"/>
+        <Caret Line="89" TopLine="71"/>
       </Position2>
       <Position3>
-        <Filename Value="libs/toclients.pas"/>
-        <Caret Line="14" Column="20"/>
+        <Filename Value="libs/echo.pas"/>
+        <Caret Line="91" TopLine="71"/>
       </Position3>
       <Position4>
-        <Filename Value="libs/toclients.pas"/>
-        <Caret Line="8" Column="48"/>
+        <Filename Value="libs/echo.pas"/>
+        <Caret Line="133" Column="27" TopLine="113"/>
       </Position4>
       <Position5>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="85" Column="92" TopLine="67"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="12" Column="7"/>
       </Position5>
       <Position6>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="83" Column="84" TopLine="67"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="13" Column="55"/>
       </Position6>
       <Position7>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="175" Column="84" TopLine="162"/>
+        <Filename Value="tclient.pas"/>
       </Position7>
       <Position8>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="181" TopLine="162"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="26" Column="30"/>
       </Position8>
       <Position9>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="182" TopLine="162"/>
+        <Filename Value="ominer.ppr"/>
+        <Caret Line="28" Column="112"/>
       </Position9>
       <Position10>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="183" TopLine="162"/>
+        <Filename Value="ominer.ppr"/>
+        <Caret Line="24" Column="72"/>
       </Position10>
       <Position11>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="184" TopLine="162"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="28" Column="3"/>
       </Position11>
       <Position12>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="185" TopLine="162"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="30" Column="71" TopLine="13"/>
       </Position12>
       <Position13>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="190" TopLine="162"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="34" Column="25"/>
       </Position13>
       <Position14>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="191" TopLine="162"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="16" Column="34"/>
       </Position14>
       <Position15>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="86" Column="14" TopLine="61"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="15" Column="33"/>
       </Position15>
       <Position16>
-        <Filename Value="libs/nxnetwork.pas"/>
-        <Caret Line="194" Column="106" TopLine="168"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="20" Column="42"/>
       </Position16>
       <Position17>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="84" Column="51" TopLine="61"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="44" Column="21" TopLine="17"/>
       </Position17>
       <Position18>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="86" Column="31" TopLine="68"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="45" Column="46" TopLine="18"/>
       </Position18>
       <Position19>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="22"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="18" Column="28"/>
       </Position19>
       <Position20>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="89" Column="18" TopLine="92"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="57" Column="36" TopLine="22"/>
       </Position20>
       <Position21>
-        <Filename Value="libs/toclients.pas"/>
-        <Caret Line="37" Column="8" TopLine="15"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="39" Column="30" TopLine="25"/>
       </Position21>
       <Position22>
-        <Filename Value="libs/toclients.pas"/>
-        <Caret Line="36" Column="13" TopLine="18"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="21" Column="6" TopLine="3"/>
       </Position22>
       <Position23>
-        <Filename Value="libs/toclients.pas"/>
-        <Caret Line="35" Column="41" TopLine="18"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="46" Column="68" TopLine="20"/>
       </Position23>
       <Position24>
-        <Filename Value="libs/toclients.pas"/>
-        <Caret Line="38" Column="8" TopLine="18"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="38" Column="42" TopLine="30"/>
       </Position24>
       <Position25>
-        <Filename Value="libs/toclients.pas"/>
-        <Caret Line="36" Column="13" TopLine="18"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="55" Column="49" TopLine="30"/>
       </Position25>
       <Position26>
-        <Filename Value="libs/toclients.pas"/>
-        <Caret Line="40" Column="69" TopLine="21"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="38" Column="41" TopLine="20"/>
       </Position26>
       <Position27>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="139" Column="38" TopLine="115"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="40" Column="51"/>
       </Position27>
       <Position28>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="134" Column="31" TopLine="115"/>
+        <Filename Value="tclient.pas"/>
+        <Caret Line="63" Column="27" TopLine="31"/>
       </Position28>
       <Position29>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="66" Column="4" TopLine="57"/>
+        <Filename Value="libs/echo.pas"/>
+        <Caret Line="108" TopLine="61"/>
       </Position29>
       <Position30>
-        <Filename Value="libs/orunner.pas"/>
-        <Caret Line="131" Column="5" TopLine="123"/>
+        <Filename Value="libraries/synapse/blcksock.pas"/>
+        <Caret Line="1814" Column="3" TopLine="1796"/>
       </Position30>
     </JumpHistory>
     <RunParams>
@@ -450,15 +360,6 @@
     </RunParams>
   </ProjectSession>
   <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="libs/onetcode.pas"/>
-        <Line Value="60"/>
-      </Item1>
-    </BreakPoints>
     <Watches Count="13">
       <Item1>
         <Expression Value="Fq"/>

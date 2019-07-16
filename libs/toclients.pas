@@ -29,6 +29,7 @@ implementation
 procedure TOClientEngine.connectToNodes;
 var i: integer;
 begin
+  writeln('Nr clienti: ' + inttostr(length(self.clients)));
    for i:=0 to length(self.clients)-1 do begin
      if not self.clients[i].tcpClient.Connected then begin
        //try to connect

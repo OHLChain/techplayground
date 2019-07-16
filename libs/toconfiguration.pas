@@ -37,7 +37,7 @@ var ini: TINIFile;
   swampCount, swampPort, i, tmpI : Integer;
   tempNode,swampHost: String;
 begin
-   self.nodeSleepTime := 1000;
+   self.nodeSleepTime := 10;
 
    if not DirectoryExists(dataDir) then
      begin

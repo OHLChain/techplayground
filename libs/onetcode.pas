@@ -139,7 +139,6 @@ begin
 end;
 
 procedure testNetServer(port: String);
-var ch: char;
 begin
   exit;
   try
@@ -149,29 +148,14 @@ begin
      server.onEvent:=@ServerConnections.ServerEvent;
      server.onData:=@ServerConnections.ServerData;
 
-
-
-      server.Connect;
-
-      writeln('Running the server. Press `q` to quit.');
-      repeat
-            sleep(100);
-            ch := readKey();
-      until (ch = 'q');
-
-      server.Disconnect;
-
-      server.Free;
-      server := nil;
+     server.Connect;
 
   finally
   end;
 end;
 
  procedure testNetClient(port: String);
-           var ch: char;
  begin
-   try
 
  client:=TClient.CreateTCPClient('127.0.0.1',port);
 
@@ -181,43 +165,7 @@ end;
  client.Connect;
 
 
- client.SendString('uuu');
-
- writeln('Running the client. Press `q` to quit.');
-      repeat
-            sleep(1000);
-            if KeyPressed then begin
-               ch := readKey();
-                if (ch <> 'q') then begin
-                  client.SendString(ch);
-                end;
-              end;
-
-
-            client.SendString(TimeToStr(Now));
-      until (ch = 'q');
-
- client.Disconnect;
-
-
- finally
-
- writeln('preparing for client free');
-
-  while client.Connected do begin
-    writeln ('waiting for d/c');
-    sleep(100);
-  end;
-
- client.Free;
-
- writeln('preparing for server free');
-
- client := nil;
-
  end;
- end;
-
 
 
 end.

@@ -4,78 +4,34 @@ program ominer;
 
 uses
   {$IFDEF UNIX}
-  //{$IFDEF UseCThreads}
+
   cthreads, cmem,
+
   {$ENDIF}
-  //{$ENDIF}
-  Classes, SysUtils, CustApp, utils, constants
+  Classes, SysUtils, CustApp, utils, constants,  crt , tech, echo, TClient
   ;
 
-type
-
-  { TOHLCAPP }
-
-  TOHLCAPP = class(TCustomApplication)
-  protected
-    procedure DoRun; override;
-  public
-    constructor Create(TheOwner: TComponent); override;
-    destructor Destroy; override;
-    procedure WriteHelp; virtual;
-  end;
-
-{ TOHLCAPP }
-
-procedure TOHLCAPP.DoRun;
-var
-  ErrorMsg: String;
+var Tserver: TTCPEchoDaemon;
+    Client: TOClient;
 begin
-  // quick check parameters
-  ErrorMsg:=CheckOptions('s', 'server');
-  if ErrorMsg<>'' then begin
-    ShowException(Exception.Create(ErrorMsg));
-    Terminate;
-    Exit;
-  end;
+  //Application.Title:='OHLChain';
+    // techTest();
 
-  //// emulate server type
-  //if HasOption('s', 'server') then begin
-  //  writeln('Server mode.');
-  //  initServer();
-  //  halt;;
-  //end;
+     //RunModel();
 
-  { add your program here }
+      Tserver := TTCPEchoDaemon.create;
+      Tserver.bindAddress:='0.0.0.0';
+      Tserver.bindPort:= 8008;
+      //Tserver.Execute;
 
-  //initMiner();
-  RunModel();
-  // stop program loop
-  Terminate;
-end;
+      sleep(1000);
+      Client := TOClient.Create;
 
-constructor TOHLCAPP.Create(TheOwner: TComponent);
-begin
-  inherited Create(TheOwner);
-  StopOnException:=True;
-end;
+     writeln('Press any key...');
+     repeat
 
-destructor TOHLCAPP.Destroy;
-begin
-  inherited Destroy;
-end;
+       sleep(100);
 
-procedure TOHLCAPP.WriteHelp;
-begin
-  { add your help code here }
-  writeln('Usage: ', ExeName, ' -h');
-end;
-
-var
-  Application: TOHLCAPP;
-begin
-  Application:=TOHLCAPP.Create(nil);
-  Application.Title:='OHLChain';
-  Application.Run;
-  Application.Free;
+     until keypressed;
 end.
 

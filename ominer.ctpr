@@ -161,11 +161,6 @@ install:
       <FormatVersion Value="2"/>
       <Modes Count="0"/>
     </RunParams>
-    <RequiredPackages Count="1">
-      <Item1>
-        <PackageName Value="pl_DCP"/>
-      </Item1>
-    </RequiredPackages>
     <Units>
       <Unit>
         <Filename Value="ominer.ppr"/>
@@ -197,33 +192,53 @@ install:
       </Unit>
       <Unit>
         <Filename Value="libs/nxnetwork.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="nxNetwork"/>
       </Unit>
       <Unit>
         <Filename Value="libs/otransactions.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="OTransactions"/>
       </Unit>
       <Unit>
         <Filename Value="libs/orunner.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ORunner"/>
       </Unit>
       <Unit>
         <Filename Value="libs/toconfiguration.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TOConfiguration"/>
       </Unit>
       <Unit>
         <Filename Value="libs/toclients.pas"/>
-        <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TOClients"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit1"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/tech.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/echo.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="libs/tconnectionmanager.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TConnectionManager"/>
+      </Unit>
+      <Unit>
+        <Filename Value="tclient.pas"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TClient"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -257,9 +272,14 @@ install:
     <Linking>
       <Debugging>
         <DebugInfoType Value="dsDwarf2Set"/>
-        <UseExternalDbgSyms Value="True"/>
+        <UseHeaptrc Value="True"/>
       </Debugging>
     </Linking>
+    <Other>
+      <Verbosity>
+        <ShowDebugInfo Value="True"/>
+      </Verbosity>
+    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">
